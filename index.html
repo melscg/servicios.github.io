@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Web Mejorados</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <h1><i class="fa-solid fa-globe"></i> Servicios Web Interactivos</h1>
+</header>
+
+<div class="contenedor">
+
+    <section class="card">
+        <h2><i class="fa-solid fa-user"></i> Datos del Usuario</h2>
+
+        <form id="datosUsuario">
+            <label>Nombre:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+            <label>Ciudad:</label>
+            <select id="ciudad">
+                <option value="Mexico City,mx">Ciudad de México</option>
+                <option value="Queretaro,mx">Querétaro</option>
+                <option value="Monterrey,mx">Monterrey</option>
+            </select>
+
+            <label>Correo:</label>
+            <input type="email" id="correo" placeholder="ejemplo@gmail.com">
+
+            <button type="button" onclick="mostrarDatos()">Enviar</button>
+        </form>
+
+        <div id="resultados"></div>
+    </section>
+
+    <section class="card">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Mapa interactivo</h2>
+        <div id="map"></div>
+    </section>
+
+    <section class="card">
+        <h2><i class="fa-solid fa-cloud-sun"></i> Clima actual</h2>
+        <button onclick="consultarClima()">Obtener clima de ciudad</button>
+        <button onclick="consultarGPS()">Clima según mi ubicación</button>
+        <div id="clima"></div>
+    </section>
+
+    <section class="card">
+        <h2><i class="fa-brands fa-hashtag"></i> Redes Sociales</h2>
+
+        <div class="social">
+            <a href="https://facebook.com" target="_blank" class="fb"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" class="ig"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" class="tw"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
